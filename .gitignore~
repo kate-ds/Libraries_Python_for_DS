@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+*.csv
+*.ipynb_checkpoints
+
+=======
+.ipynb_checkpoints/
+*.csv
+>>>>>>> temp-lesson2
