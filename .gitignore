@@ -1,6 +1,6 @@
 
 *.csv
-~Sokolova_predictions.csvC
+~Sokolova_predictions_1.csvC
 
 .ipynb_checkpoints/
 *.*~
