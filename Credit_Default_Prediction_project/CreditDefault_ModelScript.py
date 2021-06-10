@@ -109,7 +109,8 @@ class DataPreprocessing:
         X.loc[X['Years in current job'].isin(['2 years', '3 years', '8 years']), 'Years in current job'] = 2
         X.loc[X['Years in current job'].isin(['4 years', '5 years', '6 years', '7 years']), 'Years in current job'] = 3
         X.loc[X['Years in current job'].isin(['10+ years', '9 years']), 'Years in current job'] = 4
-        X.loc[X['Years in current job'] == '10+ years', 'Years in current job'] = 4
+        # X.loc[X['Years in current job'] == '10+ years', 'Years in current job'] = 4
+        # X['Years in current job'].replace(4, '10+ years')
         print(1)
 
         # Current Loan Amount
@@ -129,7 +130,7 @@ class DataPreprocessing:
         """Gap processing"""
         # Years in current job
         X['Years in current job'].loc[X['Years in current job'].isnull()] = self.modes['Years in current job']
-        X['Years in current job'] = X['Years in current job'].astype(int)
+        X['Years in current job'] = X['Years in current job'].astype('int64')
         print(1)
 
         # Months since last delinquent, Bankruptcies
